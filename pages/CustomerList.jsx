@@ -1,7 +1,7 @@
 // src/CustomerList.jsx
 
-import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 const CustomerList = () => {
   const [customers, setCustomers] = useState([]);

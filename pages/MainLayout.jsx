@@ -1,11 +1,12 @@
 // src/pages/MainLayout.jsx
 
 import React, { useState } from 'react';
-import CustomerRegistrationForm from './CustomerRegistrationForm';
-import CustomerLoginForm from './CustomerLoginForm';
-//import MerchantLoginForm from './MerchantLoginForm';
-import MerchantRegistrationForm from './MerchantRegistrationForm';
 import '../style/MainLayout.css';
+import '../style/NavBar.css';
+import CustomerLoginForm from './CustomerLoginForm';
+import CustomerRegistrationForm from './CustomerRegistrationForm';
+import MerchantLoginForm from './MerchantLoginForm';
+import MerchantRegistrationForm from './MerchantRegistrationForm';
 
 const MainLayout = () => {
   const [selectedForm, setSelectedForm] = useState('CustomerLoginForm');
@@ -16,9 +17,10 @@ const MainLayout = () => {
         return <CustomerLoginForm />;
       case 'CustomerRegistrationForm':
         return <CustomerRegistrationForm />;
-      
       case 'MerchantRegistrationForm':
         return <MerchantRegistrationForm />;
+      case 'MerchantLoginForm':
+        return <MerchantLoginForm />;
       default:
         return <CustomerLoginForm />;
     }
@@ -28,9 +30,18 @@ const MainLayout = () => {
     <div className="main-layout">
       <nav>
         <ul>
-          <li onClick={() => setSelectedForm('CustomerLoginForm')}>Customer Login</li>
-          <li onClick={() => setSelectedForm('CustomerRegistrationForm')}>Register Customer</li>
-          <li onClick={() => setSelectedForm('MerchantRegistrationForm')}>Register Merchant</li>
+          <li>
+            <select onChange={(e) => setSelectedForm(e.target.value)}>
+              <option value="CustomerLoginForm">Customer Login</option>
+              <option value="MerchantLoginForm">Merchant Login</option>
+            </select>
+          </li>
+          <li>
+            <select onChange={(e) => setSelectedForm(e.target.value)}>
+              <option value="CustomerRegistrationForm">Register Customer</option>
+              <option value="MerchantRegistrationForm">Register Merchant</option>
+            </select>
+          </li>
         </ul>
       </nav>
       <div className="content">

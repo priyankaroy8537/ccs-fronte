@@ -20,8 +20,11 @@ const CustomerLoginForm = () => {
         }
       });
       console.log('Login successful:', response.data);
-      // Redirect to a different page or show success message
-      navigate('/customers');
+      //navigate('/customer-dashboard');
+      const customerId = response.data.customerID;
+      console.log(customerId);
+      console.log('Login successful:', response.data);
+      navigate(`/customer-dashboard/${customerId}`);
     } catch (error) {
       console.error('Error logging in:', error);
       setError('Invalid email or PAN');

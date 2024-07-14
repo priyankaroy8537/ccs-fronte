@@ -53,25 +53,30 @@ body, html, #root, .main-layout {
   }
   
   .image-container img {
-    max-width: 100%;
-    height: auto;
+    width: 50%; /* Set to 50% to match the form size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
   }
   
   .form-container {
-    width: 40%;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f4f4f4;
+    width: 50%; /* Set to 50% to match the image size */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
   }
   
   form {
-    width: 100%;
+    width: 80%; /* Reduce the width of the form */
+    max-width: 400px; /* Set a maximum width for the form */
+    margin: auto; /* Center the form in the container */
   }
   
   form div {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
   
   form label {
@@ -97,4 +102,13 @@ body, html, #root, .main-layout {
   form button:hover {
     background-color: #111;
   }
-  
+  .merchant-registration-form {
+    width: 100%; /* Use the full width of the form container */
+  margin: auto; /* Center the form in the container */
+  }
+  .merchant-registration-form label,
+.merchant-registration-form input,
+.merchant-registration-form select,
+.merchant-registration-form button {
+  font-size: 9px; /* Set the font size smaller for all form elements */
+}

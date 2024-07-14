@@ -1,7 +1,7 @@
 // src/MerchantRegistrationForm.jsx
 
-import React, { useState } from 'react';
 import axios from 'axios';
+import React, { useState } from 'react';
 
 const MerchantRegistrationForm = () => {
   const [merchant, setMerchant] = useState({
@@ -49,7 +49,7 @@ const MerchantRegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="merchant-registration-form">
       <div>
         <label>Name:</label>
         <input
@@ -143,11 +143,11 @@ const MerchantRegistrationForm = () => {
       <div>
         <label>Status:</label>
         <select name="merchantStatus" value={merchant.merchantStatus} onChange={handleChange}>
-          <option value="ACTIVE">ACTIVE</option>
-          <option value="CLOSED">CLOSED</option>
+        <option value="ACTIVE">ACTIVE</option>
+        <option value="CLOSED">CLOSED</option>
         </select>
-      </div>
-      <button type="submit">Register Merchant</button>
+    </div>
+    <button type="submit">Register Merchant</button>
     </form>
   );
 };
