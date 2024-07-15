@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './pages/MainLayout';
 import CustomerLoginForm from './pages/CustomerLoginForm';
 import CustomerDashboard from './pages/CustomerDashboard';
+import ProductType from './pages/ProductType';
+
 
 const App = () => {
   return (
@@ -11,6 +13,7 @@ const App = () => {
         <Route path="/" element={<MainLayout />} />
         <Route path="/login" element={<CustomerLoginForm />} />
         <Route path="/customer-dashboard/*" element={<CustomerDashboard />} />
+         <Route path="/products" element={<ProductType />} /> 
       </Routes>
     </Router>
   );
