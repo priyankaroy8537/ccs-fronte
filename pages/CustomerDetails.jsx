@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
-const CustomerDetails = () => {
+const CustomerDetails = (props) => {
   const [customer, setCustomer] = useState(null);
   const { customerId } = useParams();
-  const id=Number(customerId);
-  console.log(customerId);
+  //const id=Number(customerId);
+  console.log("9",props.customerId);
 //   const id = parseInt(customerId, 10);
-  console.log(id);
+  //console.log(id);
   useEffect(() => {
     const fetchCustomer = async () => {
       try {
