@@ -2,6 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../style/ProductType.css';
+import CustomerNavBar from './CustomerNavBar';
 
 import GoldCard from '../assets/gold.jpg';
 import PlatinumCrad from '../assets/platinum.jpg';
@@ -28,7 +29,9 @@ const products = [
 
 const ProductCarousel = () => {
   return (
+
     <div className="carousel-container">
+     
       <Carousel showThumbs={false} showStatus={false}>
         {products.map((product) => (
           <div className="carousel-slide" key={product.type}>

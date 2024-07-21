@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import AdminNavBar from "../pages/AdminNavBar";
 
 const MerchantList = () => {
   const [merchants, setMerchants] = useState([]);
@@ -21,6 +22,7 @@ const MerchantList = () => {
 
   return (
     <div>
+    <AdminNavBar/>
       <h1>Merchant List</h1>
       <table>
         <thead>

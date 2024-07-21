@@ -41,8 +41,8 @@ const TransactionDetails = () => {
         <div>
           <p><strong>Transaction ID:</strong> {transaction.transactionID}</p>
           <p><strong>Transaction Type:</strong> {transaction.transactionType}</p>
-          <p><strong>Credit Card Number:</strong> {transaction.creditcard.number}</p>
-          <p><strong>Merchant ID:</strong> {transaction.merchant.id}</p>
+          <p><strong>Credit Card Number:</strong> {transaction.creditcard.creditcardNumber}</p>
+          <p><strong>Merchant ID:</strong> {transaction.merchant.merchantID}</p>
           <p><strong>Transaction Amount:</strong> {transaction.transactionAmount}</p>
           <p><strong>Currency:</strong> {transaction.currency}</p>
           <p><strong>Auth Code:</strong> {transaction.authCode}</p>
